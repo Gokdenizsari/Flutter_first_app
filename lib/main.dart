@@ -18,7 +18,36 @@ class MyApp extends StatelessWidget {
           ),
           backgroundColor: Colors.purple,
         ),
-        body: Container(),
+        body: Container(
+          color: Colors.green,
+          /*height: 400,*/
+          child: Row(
+            mainAxisSize: MainAxisSize.max,
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                Icon(
+                  Icons.add_circle,
+                  size: 64,
+                  color: Colors.teal,
+                ),
+                Icon(
+                  Icons.add_circle,
+                  size: 64,
+                  color: Colors.red,
+                ),
+                Icon(
+                  Icons.add_circle,
+                  size: 64,
+                  color: Colors.orange,
+                ),
+                Icon(
+                  Icons.add_circle,
+                  size: 64,
+                  color: Colors.black,
+                )
+              ]),
+        ),
         floatingActionButton: FloatingActionButton(
             onPressed: () {
               debugPrint("Click");
