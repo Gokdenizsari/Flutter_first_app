@@ -5,7 +5,8 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-      String _img1='https://www.webtekno.com/images/editor/default/0002/60/4a7d6f13f8b48305ac545bd5e27a244f281b0407.jpeg';
+  String _img1 =
+      'https://www.webtekno.com/images/editor/default/0002/60/4a7d6f13f8b48305ac545bd5e27a244f281b0407.jpeg';
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -17,7 +18,11 @@ class MyApp extends StatelessWidget {
           ),
           backgroundColor: Colors.purple,
         ),
-        body: Container(),
+        body: Container(
+          child: Row(
+            children: flexibleContainer,
+          ),
+        ),
         floatingActionButton: FloatingActionButton(
             onPressed: () {
               debugPrint("Click");
@@ -31,53 +36,167 @@ class MyApp extends StatelessWidget {
     );
   }
 
+  List<Widget> get sorunluContainer {
+    return [
+      Container(
+        width: 80,
+        height: 80,
+        color: Colors.red,
+      ),
+      Expanded(
+        child: Container(
+          width: 80,
+          height: 80,
+          color: Colors.black,
+        ),
+      ),
+      Container(
+        width: 80,
+        height: 80,
+        color: Colors.teal,
+      ),
+      Container(
+        width: 80,
+        height: 80,
+        color: Colors.orange,
+      ),
+      Container(width: 80, height: 80, color: Colors.grey),
+      Container(
+        width: 80,
+        height: 80,
+        color: Colors.green,
+      )
+    ];
+  }
+
+  List<Widget> get expandedContainer {
+    return [
+      Container(
+        width: 80,
+        height: 80,
+        color: Colors.red,
+      ),
+      Expanded(
+        flex: 4,
+        child: Container(
+          width: 80,
+          height: 80,
+          color: Colors.black,
+        ),
+      ),
+      Expanded(
+        flex: 2,
+        child: Container(
+          width: 80,
+          height: 80,
+          color: Colors.teal,
+        ),
+      ),
+      Container(
+        width: 80,
+        height: 80,
+        color: Colors.orange,
+      ),
+      Container(width: 80, height: 80, color: Colors.grey),
+      Container(
+        width: 80,
+        height: 80,
+        color: Colors.green,
+      )
+    ];
+  }
+
+  List<Widget> get flexibleContainer {
+    return [
+      Flexible(
+        child: Container(
+          width: 80,
+          height: 80,
+          color: Colors.red,
+        ),
+      ),
+      Flexible(
+        child: Container(
+          width: 200,
+          height: 200,
+          color: Colors.black,
+        ),
+      ),
+      Flexible(
+        child: Container(
+          width: 80,
+          height: 80,
+          color: Colors.teal,
+        ),
+      ),
+      Flexible(
+        child: Container(
+          width: 80,
+          height: 80,
+          color: Colors.yellow,
+        ),
+      ),
+      Flexible(
+        child: Container(
+          width: 80,
+          height: 80,
+          color: Colors.blue,
+        ),
+      ),
+      Flexible(
+        child: Container(
+          width: 80,
+          height: 80,
+          color: Colors.green,
+        ),
+      ),
+    ];
+  }
+
   Widget colummAndRow() {
     return Container(
-        color: Colors.green,
-        /*height: 400,*/
-        child: Column(
-            mainAxisSize: MainAxisSize.max,
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              Row(
-                mainAxisSize: MainAxisSize.max,
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  Text("G",
-                      style: TextStyle(fontSize: 24, color: Colors.white)),
-                  Text("ö",
-                      style: TextStyle(fontSize: 24, color: Colors.white)),
-                  Text("k",
-                      style: TextStyle(fontSize: 24, color: Colors.white)),
-                  Text(
-                    "o",
-                    style: TextStyle(fontSize: 24, color: Colors.white),
-                  )
-                ],
-              ),
-              Icon(
-                Icons.add_circle,
-                size: 64,
-                color: Colors.teal,
-              ),
-              Icon(
-                Icons.add_circle,
-                size: 64,
-                color: Colors.red,
-              ),
-              Icon(
-                Icons.add_circle,
-                size: 64,
-                color: Colors.orange,
-              ),
-              Icon(
-                Icons.add_circle,
-                size: 64,
-                color: Colors.black,
-              )
-            ]),
-      );
+      color: Colors.green,
+      /*height: 400,*/
+      child: Column(
+          mainAxisSize: MainAxisSize.max,
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            Row(
+              mainAxisSize: MainAxisSize.max,
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                Text("G", style: TextStyle(fontSize: 24, color: Colors.white)),
+                Text("ö", style: TextStyle(fontSize: 24, color: Colors.white)),
+                Text("k", style: TextStyle(fontSize: 24, color: Colors.white)),
+                Text(
+                  "o",
+                  style: TextStyle(fontSize: 24, color: Colors.white),
+                )
+              ],
+            ),
+            Icon(
+              Icons.add_circle,
+              size: 64,
+              color: Colors.teal,
+            ),
+            Icon(
+              Icons.add_circle,
+              size: 64,
+              color: Colors.red,
+            ),
+            Icon(
+              Icons.add_circle,
+              size: 64,
+              color: Colors.orange,
+            ),
+            Icon(
+              Icons.add_circle,
+              size: 64,
+              color: Colors.black,
+            )
+          ]),
+    );
   }
 
   Widget containerDersleri() {
