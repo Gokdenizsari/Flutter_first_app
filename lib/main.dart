@@ -57,6 +57,9 @@ class MyApp extends StatelessWidget {
           child: Container(
             width: 75,
             height: 75,
+            margin: EdgeInsets.only(
+              top: 10,
+            ),
             color: Colors.amber.shade200,
             alignment: Alignment.center,
             child: Text(
@@ -69,6 +72,9 @@ class MyApp extends StatelessWidget {
           child: Container(
             width: 75,
             height: 75,
+            margin: EdgeInsets.only(
+              top: 10,
+            ),
             color: Colors.amber.shade300,
             alignment: Alignment.center,
             child: Text(
@@ -81,6 +87,7 @@ class MyApp extends StatelessWidget {
           child: Container(
             width: 75,
             height: 75,
+            margin: EdgeInsets.only(top: 10),
             color: Colors.amber.shade400,
             alignment: Alignment.center,
             child: Text(
@@ -93,6 +100,7 @@ class MyApp extends StatelessWidget {
           child: Container(
             width: 75,
             height: 75,
+            margin: EdgeInsets.only(top: 10),
             color: Colors.amber.shade500,
             alignment: Alignment.center,
             child: Text(
@@ -105,6 +113,7 @@ class MyApp extends StatelessWidget {
           child: Container(
             width: 75,
             height: 75,
+            margin: EdgeInsets.only(top: 10),
             color: Colors.amber.shade600,
             alignment: Alignment.center,
             child: Text(
@@ -117,6 +126,7 @@ class MyApp extends StatelessWidget {
           child: Container(
             width: 75,
             height: 75,
+            margin: EdgeInsets.only(top: 10),
             color: Colors.amber.shade700,
             alignment: Alignment.center,
             child: Text(
