@@ -5,6 +5,70 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  Row dartRowOlustur() {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
+      mainAxisSize: MainAxisSize.max,
+      children: [
+        Container(
+          width: 75,
+          height: 75,
+          alignment: Alignment.center,
+          color: Colors.amber.shade100,
+          child: Text(
+            "R",
+            style: TextStyle(fontSize: 48, color: Colors.blue.shade200),
+          ),
+        ),
+        Container(
+          width: 75,
+          height: 75,
+          color: Colors.amber.shade200,
+          alignment: Alignment.center,
+          child: Text(
+            "İ",
+            style: TextStyle(fontSize: 48, color: Colors.blue.shade200),
+          ),
+        ),
+        Container(
+          width: 75,
+          height: 75,
+          color: Colors.amber.shade300,
+          alignment: Alignment.center,
+          child: Text(
+            "S",
+            style: TextStyle(fontSize: 48, color: Colors.blue.shade300),
+          ),
+        ),
+        Container(
+          height: 75,
+          width: 75,
+          color: Colors.amber.shade400,
+          alignment: Alignment.center,
+          child: Text(
+            "E",
+            style: TextStyle(fontSize: 48, color: Colors.blue.shade500),
+          ),
+        ),
+        Column(children: [
+          Container(
+          width: 75,
+          height: 75,
+          color: Colors.amber.shade200,
+          alignment: Alignment.center,
+          child: Text(
+            "O", style: TextStyle,
+          ),)
+        ],
+          
+        )
+        
+        
+        
+      ],
+    );
+  }
+
   String _img1 =
       'https://www.webtekno.com/images/editor/default/0002/60/4a7d6f13f8b48305ac545bd5e27a244f281b0407.jpeg';
   @override
@@ -19,10 +83,16 @@ class MyApp extends StatelessWidget {
           backgroundColor: Colors.purple,
         ),
         body: Container(
-          child: Row(
-            children: flexibleContainer,
+            child: Column(
+          children: [
+            dartRowOlustur(),
+          ],
+        )
+            /*child: Row(
+            children: sorunluContainer,
           ),
-        ),
+        */
+            ),
         floatingActionButton: FloatingActionButton(
             onPressed: () {
               debugPrint("Click");
