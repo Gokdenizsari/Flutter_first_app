@@ -5,9 +5,27 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  Container containerolusumu(String Harf, Color renk, {double margin = 0}) {
+    return Container(
+      width: 75,
+      height: 75,
+      alignment: Alignment.center,
+      margin: EdgeInsets.only(top: margin),
+      color: renk,
+      child: Text(
+        Harf,
+        style: TextStyle(fontSize: 48, color: Colors.black),
+      ),
+    );
+  }
+
   Row dartRowOlustur() {
     return Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-      Container(
+      containerolusumu("R", Colors.blue.shade200),
+      containerolusumu("İ", Colors.blue.shade300),
+      containerolusumu("S", Colors.blue.shade400),
+      containerolusumu("E", Colors.blue.shade500)
+      /*Container(
         width: 75,
         height: 75,
         alignment: Alignment.center,
@@ -46,7 +64,7 @@ class MyApp extends StatelessWidget {
           "E",
           style: TextStyle(fontSize: 48, color: Colors.blue.shade500),
         ),
-      ),
+      ),*/
     ]);
   }
 
@@ -54,86 +72,22 @@ class MyApp extends StatelessWidget {
     return Column(
       children: [
         Expanded(
-          child: Container(
-            width: 75,
-            height: 75,
-            margin: EdgeInsets.only(
-              top: 10,
-            ),
-            color: Colors.amber.shade200,
-            alignment: Alignment.center,
-            child: Text(
-              "O",
-              style: TextStyle(fontSize: 48, color: Colors.blue.shade200),
-            ),
-          ),
+          child: containerolusumu("O", Colors.blue.shade200, margin: 10),
         ),
         Expanded(
-          child: Container(
-            width: 75,
-            height: 75,
-            margin: EdgeInsets.only(
-              top: 10,
-            ),
-            color: Colors.amber.shade300,
-            alignment: Alignment.center,
-            child: Text(
-              "L",
-              style: TextStyle(fontSize: 48, color: Colors.blue.shade300),
-            ),
-          ),
+          child: containerolusumu("L", Colors.blue.shade200, margin: 10),
         ),
         Expanded(
-          child: Container(
-            width: 75,
-            height: 75,
-            margin: EdgeInsets.only(top: 10),
-            color: Colors.amber.shade400,
-            alignment: Alignment.center,
-            child: Text(
-              "İ",
-              style: TextStyle(fontSize: 48, color: Colors.blue.shade400),
-            ),
-          ),
+          child: containerolusumu("İ", Colors.blue.shade200, margin: 10),
         ),
         Expanded(
-          child: Container(
-            width: 75,
-            height: 75,
-            margin: EdgeInsets.only(top: 10),
-            color: Colors.amber.shade500,
-            alignment: Alignment.center,
-            child: Text(
-              "M",
-              style: TextStyle(fontSize: 48, color: Colors.blue.shade500),
-            ),
-          ),
+          child: containerolusumu("M", Colors.blue.shade200, margin: 10),
         ),
         Expanded(
-          child: Container(
-            width: 75,
-            height: 75,
-            margin: EdgeInsets.only(top: 10),
-            color: Colors.amber.shade600,
-            alignment: Alignment.center,
-            child: Text(
-              "E",
-              style: TextStyle(fontSize: 48, color: Colors.blue.shade600),
-            ),
-          ),
+          child: containerolusumu("E", Colors.blue.shade200, margin: 10),
         ),
         Expanded(
-          child: Container(
-            width: 75,
-            height: 75,
-            margin: EdgeInsets.only(top: 10),
-            color: Colors.amber.shade700,
-            alignment: Alignment.center,
-            child: Text(
-              "S",
-              style: TextStyle(fontSize: 48, color: Colors.blue.shade700),
-            ),
-          ),
+          child: containerolusumu("S", Colors.blue.shade200, margin: 10),
         )
       ],
     );
