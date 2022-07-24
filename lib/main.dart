@@ -6,65 +6,125 @@ void main() {
 
 class MyApp extends StatelessWidget {
   Row dartRowOlustur() {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceAround,
-      mainAxisSize: MainAxisSize.max,
+    return Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+      Container(
+        width: 75,
+        height: 75,
+        alignment: Alignment.center,
+        color: Colors.amber.shade100,
+        child: Text(
+          "R",
+          style: TextStyle(fontSize: 48, color: Colors.blue.shade200),
+        ),
+      ),
+      Container(
+        width: 75,
+        height: 75,
+        color: Colors.amber.shade200,
+        alignment: Alignment.center,
+        child: Text(
+          "İ",
+          style: TextStyle(fontSize: 48, color: Colors.blue.shade200),
+        ),
+      ),
+      Container(
+        width: 75,
+        height: 75,
+        color: Colors.amber.shade300,
+        alignment: Alignment.center,
+        child: Text(
+          "S",
+          style: TextStyle(fontSize: 48, color: Colors.blue.shade300),
+        ),
+      ),
+      Container(
+        height: 75,
+        width: 75,
+        color: Colors.amber.shade400,
+        alignment: Alignment.center,
+        child: Text(
+          "E",
+          style: TextStyle(fontSize: 48, color: Colors.blue.shade500),
+        ),
+      ),
+    ]);
+  }
+
+  Column dartColunmOlustur() {
+    return Column(
       children: [
-        Container(
-          width: 75,
-          height: 75,
-          alignment: Alignment.center,
-          color: Colors.amber.shade100,
-          child: Text(
-            "R",
-            style: TextStyle(fontSize: 48, color: Colors.blue.shade200),
+        Expanded(
+          child: Container(
+            width: 75,
+            height: 75,
+            color: Colors.amber.shade200,
+            alignment: Alignment.center,
+            child: Text(
+              "O",
+              style: TextStyle(fontSize: 48, color: Colors.blue.shade200),
+            ),
           ),
         ),
-        Container(
-          width: 75,
-          height: 75,
-          color: Colors.amber.shade200,
-          alignment: Alignment.center,
-          child: Text(
-            "İ",
-            style: TextStyle(fontSize: 48, color: Colors.blue.shade200),
+        Expanded(
+          child: Container(
+            width: 75,
+            height: 75,
+            color: Colors.amber.shade300,
+            alignment: Alignment.center,
+            child: Text(
+              "L",
+              style: TextStyle(fontSize: 48, color: Colors.blue.shade300),
+            ),
           ),
         ),
-        Container(
-          width: 75,
-          height: 75,
-          color: Colors.amber.shade300,
-          alignment: Alignment.center,
-          child: Text(
-            "S",
-            style: TextStyle(fontSize: 48, color: Colors.blue.shade300),
+        Expanded(
+          child: Container(
+            width: 75,
+            height: 75,
+            color: Colors.amber.shade400,
+            alignment: Alignment.center,
+            child: Text(
+              "İ",
+              style: TextStyle(fontSize: 48, color: Colors.blue.shade400),
+            ),
           ),
         ),
-        Container(
-          height: 75,
-          width: 75,
-          color: Colors.amber.shade400,
-          alignment: Alignment.center,
-          child: Text(
-            "E",
-            style: TextStyle(fontSize: 48, color: Colors.blue.shade500),
+        Expanded(
+          child: Container(
+            width: 75,
+            height: 75,
+            color: Colors.amber.shade500,
+            alignment: Alignment.center,
+            child: Text(
+              "M",
+              style: TextStyle(fontSize: 48, color: Colors.blue.shade500),
+            ),
           ),
         ),
-        Column(children: [
-          Container(
-          width: 75,
-          height: 75,
-          color: Colors.amber.shade200,
-          alignment: Alignment.center,
-          child: Text(
-            "O", style: TextStyle,
-          ),)
-        ],
-          
+        Expanded(
+          child: Container(
+            width: 75,
+            height: 75,
+            color: Colors.amber.shade600,
+            alignment: Alignment.center,
+            child: Text(
+              "E",
+              style: TextStyle(fontSize: 48, color: Colors.blue.shade600),
+            ),
+          ),
+        ),
+        Expanded(
+          child: Container(
+            width: 75,
+            height: 75,
+            color: Colors.amber.shade700,
+            alignment: Alignment.center,
+            child: Text(
+              "S",
+              style: TextStyle(fontSize: 48, color: Colors.blue.shade700),
+            ),
+          ),
         )
-        
-        
-        
       ],
     );
   }
@@ -84,9 +144,8 @@ class MyApp extends StatelessWidget {
         ),
         body: Container(
             child: Column(
-          children: [
-            dartRowOlustur(),
-          ],
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [dartRowOlustur(), Expanded(child: dartColunmOlustur())],
         )
             /*child: Row(
             children: sorunluContainer,
